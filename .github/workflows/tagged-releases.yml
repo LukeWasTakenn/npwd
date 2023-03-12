@@ -115,12 +115,12 @@ jobs:
           git config user.name "itschip"
           yarn version --new-version ${{ steps.get_tag.outputs.VERSION_TAG }}
 
-      - name: Release @npwd/types
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          package: './packages/npwd-types/package.json'
-          access: 'public'
+      # - name: Release @npwd/types
+      #   uses: JS-DevTools/npm-publish@v1
+      #   with:
+      #     token: ${{ secrets.NPM_TOKEN }}
+      #     package: './packages/npwd-types/package.json'
+      #     access: 'public'
 
       - name: Build @npwd/hooks
         run: |
@@ -130,9 +130,9 @@ jobs:
           git config user.name "itschip"
           yarn version --new-version ${{ steps.get_tag.outputs.VERSION_TAG }}
 
-      - name: Release @npwd/hooks
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          package: './packages/npwd-hooks/package.json'
-          access: 'public'
+      # - name: Release @npwd/hooks
+      #   uses: JS-DevTools/npm-publish@v1
+      #   with:
+      #     token: ${{ secrets.NPM_TOKEN }}
+      #     package: './packages/npwd-hooks/package.json'
+      #     access: 'public'
